@@ -1,0 +1,40 @@
+@import 'Var';
+
+nav {
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        height: 40px;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        a {
+            text-decoration: none;
+            color: $primary-color;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0px;
+                width: 0;
+                height: 1px;
+                background-color: $primary-color;
+                transition: width 0.3s ease-in-out;
+            }
+
+            &:hover::after,
+            &:focus::after {
+                width: 100%;
+            }
+        }
+    }
+}
