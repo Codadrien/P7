@@ -1,0 +1,14 @@
+@import 'Vars';
+
+.tags {
+    gap: 20px;
+    display: flex;
+    margin-top: 20px;
+
+    .tag {
+        background-color: $primary-color;
+        color: white;
+        border-radius: 10px;
+        padding: 5px 30px;
+    }
+}

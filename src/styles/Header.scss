@@ -1,4 +1,4 @@
-@import 'Var';
+@import 'Vars';
 
 nav {
     padding: 30px 50px;
@@ -24,9 +24,9 @@ nav {
                 content: '';
                 position: absolute;
                 left: 0;
-                bottom: 0px;
+                bottom: -2px;
                 width: 0;
-                height: 1px;
+                height: 2px;
                 background-color: $primary-color;
                 transition: width 0.3s ease-in-out;
             }

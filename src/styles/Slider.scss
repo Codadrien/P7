@@ -1,0 +1,35 @@
+@import 'Vars';
+
+.slider {
+    position: relative;
+
+    .slider-img {
+        height: 400px;
+        width: 100%;
+        border-radius: $slider-radius;
+        object-fit: cover;
+    }
+
+    .swiper-right,
+    .swiper-left {
+        position: absolute;
+        content: url("../img/swiper.svg");
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .swiper-right {
+        right: 0;
+        transform: scaleX(-1) translateY(-50%);
+    }
+
+    .index {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 18px;
+    }
+}

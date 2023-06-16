@@ -1,6 +1,6 @@
 import Header from '../../components/Header.jsx'
 import Banner from '../../components/Banner.jsx'
-// import Card from '../../components/Card.jsx'
+import Card from '../../components/Card.jsx'
 import Footer from '../../components/Footer.jsx'
 import logo from '../../img/falaiseMer.png'
 import '../../styles/HomePages.scss'
@@ -15,6 +15,7 @@ function HomePage() {
           src={logo}
           alt="falaise mer"
         />
+        <Card />
       </main>
       <Footer />
     </div>
