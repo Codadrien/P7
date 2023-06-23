@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/P7/static/css/main.ec754217.css",
+    "main.css": "/P7/static/css/main.c157d5d2.css",
     "main.js": "/P7/static/js/main.0a86814c.js",
     "static/media/montagne.png": "/P7/static/media/montagne.abab3f12f4cb82f1dfa1.png",
     "static/media/falaiseMer.png": "/P7/static/media/falaiseMer.d00ae7dd3ef927bb988d.png",
@@ -9,11 +9,11 @@
     "static/media/arrow.svg": "/P7/static/media/arrow.a8bf5a4e303ec0f882c1.svg",
     "index.html": "/P7/index.html",
     "static/media/swiper.svg": "/P7/static/media/swiper.b027cb8f12b9c0f74a4a.svg",
-    "main.ec754217.css.map": "/P7/static/css/main.ec754217.css.map",
+    "main.c157d5d2.css.map": "/P7/static/css/main.c157d5d2.css.map",
     "main.0a86814c.js.map": "/P7/static/js/main.0a86814c.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec754217.css",
+    "static/css/main.c157d5d2.css",
     "static/js/main.0a86814c.js"
   ]
 }
