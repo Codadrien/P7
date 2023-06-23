@@ -5,12 +5,12 @@ function Header() {
   return (
     <div className="Header">
       <nav>
-        <Link to="/">
+        <Link to="/P7">
           <img src={require('../img/logo.png')} alt="Logo Kasa" />
         </Link>
         <ul>
           <li>
-            <Link to="/">Accueil</Link>
+            <Link to="/P7">Accueil</Link>
           </li>
           <li>
             <Link to="/APropos">A Propos</Link>
