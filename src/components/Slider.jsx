@@ -1,15 +1,7 @@
-import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
-import datas from '../datas/data.json'
 import '../styles/Slider.scss'
 
-function Slider({ src, alt }) {
-  let { id } = useParams()
-  console.log(id)
-
-  let data = datas.find((data) => data.id === id)
-  console.log(data)
-
+function Slider({ data }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const handleNext = () => {
@@ -22,6 +14,7 @@ function Slider({ src, alt }) {
     )
   }
 
+  // chargement des images pour éviter le flash blanc
   useEffect(() => {
     data.pictures.forEach((picture) => {
       const img = new Image()
@@ -36,7 +29,11 @@ function Slider({ src, alt }) {
       <div className="index">
         {currentIndex + 1}/{data.pictures.length}
       </div>
-      <img className="slider-img" src={data.pictures[currentIndex]} alt={alt} />
+      <img
+        className="slider-img"
+        src={data.pictures[currentIndex]}
+        alt={data.title}
+      />
     </div>
   )
 }

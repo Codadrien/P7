@@ -1,11 +1,16 @@
 @import 'Vars';
 
-.color-star {
-    color: $primary-color;
-    font-size: 25px;
+.all-star {
+    display: flex;
+    gap: 10px
 }
 
-.color {
-    color: #E3E3E3;
+.color-star {
     font-size: 25px;
+    content: url(../img/colorStar.svg);
+}
+
+.empty-star {
+    font-size: 25px;
+    content: url(../img/emptyStar.svg);
 }

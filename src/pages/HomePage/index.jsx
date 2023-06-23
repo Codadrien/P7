@@ -4,8 +4,23 @@ import Card from '../../components/Card.jsx'
 import Footer from '../../components/Footer.jsx'
 import logo from '../../img/falaiseMer.png'
 import '../../styles/HomePages.scss'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 function HomePage() {
+  const [allData, setAllData] = useState([])
+
+  useEffect(() => {
+    axios
+      .get('/data.json')
+      .then((response) => {
+        setAllData(response.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }, [])
+
   return (
     <div className="HomePage">
       <Header />
@@ -15,7 +30,9 @@ function HomePage() {
           src={logo}
           alt="falaise mer"
         />
-        <Card />
+        <div className="block-cards">
+          <Card allData={allData} />
+        </div>
       </main>
       <Footer />
     </div>

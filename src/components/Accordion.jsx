@@ -12,7 +12,13 @@ function Accordion({ title, content }) {
       <div className="accordion__title" onClick={handleToggle}>
         {title}
       </div>
-      <div className="accordion__content">{content}</div>
+      <div className="accordion__content">
+        {Array.isArray(content)
+          ? content.map((item, index) => {
+              return <p key={index}>{item}</p>
+            })
+          : content}
+      </div>
     </div>
   )
 }

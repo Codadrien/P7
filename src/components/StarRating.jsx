@@ -6,23 +6,15 @@ const StarRating = ({ rating }) => {
 
   // Générer les étoiles pleines
   for (let i = 0; i < rating; i++) {
-    starArray.push(
-      <span className="color-star" key={i}>
-        &#9733;
-      </span>
-    )
+    starArray.push(<span className="color-star" key={i}></span>)
   }
 
   // Générer les étoiles vides
   for (let i = rating; i < maxRating; i++) {
-    starArray.push(
-      <span className="color" key={i}>
-        &#9733;
-      </span>
-    )
+    starArray.push(<span className="empty-star" key={i}></span>)
   }
 
-  return <div>{starArray}</div>
+  return <div className="all-star">{starArray}</div>
 }
 
 export default StarRating
