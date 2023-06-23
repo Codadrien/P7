@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import dataJson from '../../data/data.json'
 import Accordion from '../../components/Accordion.jsx'
 import Footer from '../../components/Footer.jsx'
 import Header from '../../components/Header.jsx'
@@ -15,20 +15,12 @@ function HomePage() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    axios
-      .get('/data.json')
-      .then((response) => {
-        const allData = response.data
-        const foundData = allData.find((item) => item.id === id)
-        if (foundData) {
-          setData(foundData)
-        } else {
-          navigate('/Error404')
-        }
-      })
-      .catch((error) => {
-        console.log(error)
-      })
+    const foundData = dataJson.find((item) => item.id === id)
+    if (foundData) {
+      setData(foundData)
+    } else {
+      navigate('/Error404')
+    }
   }, [id, navigate])
 
   if (!data) {

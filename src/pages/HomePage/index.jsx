@@ -5,20 +5,13 @@ import Footer from '../../components/Footer.jsx'
 import logo from '../../img/falaiseMer.png'
 import '../../styles/HomePages.scss'
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import dataJson from '../../data/data.json'
 
 function HomePage() {
   const [allData, setAllData] = useState([])
 
   useEffect(() => {
-    axios
-      .get('/data.json')
-      .then((response) => {
-        setAllData(response.data)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
+    setAllData(dataJson)
   }, [])
 
   return (
