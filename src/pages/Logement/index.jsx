@@ -24,7 +24,18 @@ function HomePage() {
   }, [id, navigate])
 
   if (!data) {
-    return null
+    return (
+      <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    )
   }
 
   return (

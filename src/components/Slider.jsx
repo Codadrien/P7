@@ -24,8 +24,12 @@ function Slider({ data }) {
 
   return (
     <div className="slider">
-      <div className="swiper-left" onClick={handlePrevious}></div>
-      <div className="swiper-right" onClick={handleNext}></div>
+      {data.pictures.length > 1 && (
+        <>
+          <div className="swiper-left" onClick={handlePrevious}></div>
+          <div className="swiper-right" onClick={handleNext}></div>
+        </>
+      )}
       <div className="index">
         {currentIndex + 1}/{data.pictures.length}
       </div>

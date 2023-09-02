@@ -13,11 +13,13 @@ function Accordion({ title, content }) {
         {title}
       </div>
       <div className="accordion__content">
-        {Array.isArray(content)
-          ? content.map((item, index) => {
-              return <p key={index}>{item}</p>
-            })
-          : content}
+        {Array.isArray(content) ? (
+          content.map((item, index) => {
+            return <p key={index}>{item}</p>
+          })
+        ) : (
+          <p>{content}</p>
+        )}
       </div>
     </div>
   )
