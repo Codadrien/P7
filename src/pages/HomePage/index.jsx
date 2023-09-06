@@ -24,7 +24,9 @@ function HomePage() {
           alt="falaise mer"
         />
         <div className="block-cards">
-          <Card allData={allData} />
+          {allData.map((data) => (
+            <Card id={data.id} title={data.title} cover={data.cover} />
+          ))}
         </div>
       </main>
       <Footer />
