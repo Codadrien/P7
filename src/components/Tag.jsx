@@ -1,14 +1,10 @@
 import '../styles/Tag.scss'
 
-function Tag({ data }) {
+function Tag({ tag, index }) {
   return (
-    <div className="tags">
-      {data.tags.map((tag, index) => (
-        <span className="tag" key={index}>
-          {tag}
-        </span>
-      ))}
-    </div>
+    <span className="tag" key={index}>
+      {tag}
+    </span>
   )
 }
 

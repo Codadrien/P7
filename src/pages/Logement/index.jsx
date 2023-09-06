@@ -47,7 +47,11 @@ function HomePage() {
           <div className="title-part">
             <h1 className="title">{data.title}</h1>
             <span className="location">{data.location}</span>
-            <Tag data={data} />
+            <div className="tags">
+              {data.tags.map((tag, index) => (
+                <Tag tag={tag} index={index} />
+              ))}
+            </div>
           </div>
           <div className="profile">
             <div className="profile-part">
